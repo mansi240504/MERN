@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission form  </title>
+</head>
+<body>
+    <h1>Student Admission Form </h1>
+    <form >
+        <label for=" name">Student name </label>
+        <input type="text" id="name" >
+        <br>
+        <br>
+        <label for=" email">Student email  </label>
+        <input type="email" id="email"  required minlength=>
+        <br>
+
+        <label for=" DOB">Date of Birth  </label>
+        <input type="date" id="DOB" >
+        <br>
+        <br>
+        <label for=" ">Gender </label>
+        <input type="radio"  name="gender" > Male 
+        <input type="radio" name="gender" > Female 
+        <br>
+        <br>
+         <label for=" ">Select Course </label>
+         <select >
+            <option > MERN Stack Development </option>
+            <option > Data Analytics </option>
+            <option > Python  </option>
+            <option > Data Science  </option>
+            <option > Cyber Security </option>
+         </select>
+         <br><br>
+         <label for=""> College Name </label>
+         <input type="text" list="college" >
+
+         <datalist id="college ">
+             <option > Goel Institute </option>
+             <option > BBD </option>
+             <option >buncel</option>
+             <option > Amity</option>
+         </datalist>
+         <br><br>
+         <label for="">Address </label>
+         <textarea rows="5" cols="20"></textarea>
+         <br><br>
+          <input type="checkbox">
+          <label for=""> I accept terms &conditions</label>
+          <br><br>
+          <details>
+            <summary> view Term & Conditions </summary>
+            <p>Lorem ipsum dolor <mark>distinctio</mark>it amet consectetur adipisicing elit. Debitis dolores distinctio harum reiciendis, molestias vitae! Sit tempore pariatur eos laudantium.</p>
+          </details>
+
+        <button type="submit"> Submit </button>
+    </form>
+</body>
+</html>
