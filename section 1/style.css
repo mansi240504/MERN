@@ -1,0 +1,11 @@
+ .btn{
+    background-color: aquamarine;
+    text-align: center;
+    text-decoration: dotted;
+    color: darkcyan;
+    transition-duration: 500ms;
+ }
+ .btn:hover{
+    transform: scale(1.2);
+    
+ }
