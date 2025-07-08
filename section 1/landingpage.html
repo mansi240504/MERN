@@ -4,24 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
+  <body class="md:bg-green-500 bg-gray-200 ">
     <header>
         <main>
             <article>
-                    <div class="grid grid-cols-2 container mx-auto">
-                        <div class="">
-                            <h1 class="text-6xl font-bold ">My website</h1>
+                    <div class="grid md:grid-cols-2 container px-6 md:0 mx-auto gap-10">
+                        <div class=" space-y-6 my-auto order-last md:order-first text-center md:text-left ">
+                            <h1 class="  text-4xl md:text-6xl font-bold ">My website</h1>
                             <h4 class="text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel assumenda fugit minima iste deleniti recusandae cumque voluptatibus ipsa odit suscipit.</h4>
-                            <div class="flex gap-6">
+                            <div class="flex justify-center md:justify-start gap-6">
                                 <button class="bg-blue-500 p-3 text-white rounded-lg">Get Started</button>
                                 <button class="bg-gray-200 p-3 text-blue-500 rounded-lg">Learn More</button>
                             </div>
                         </div>
-                        <div class="">
+                        <div class=" ">
                             <img class="w-1/2" src="https://img.freepik.com/free-vector/isometric-e-commerce-concept-style_23-2148569257.jpg" alt="">
                         </div>
                     </div>
+                </section>
+            </article>
+            <article>
+                <section class="bg-blue-100 py-20">
+                    <h2 class="text-3xl  text-center font-bold mb-10">Feature Section </h2>
+                    <div class="container px-10 md:px-0 mx-auto grid  grid-cols-1 md:grid-cols-3  space-y-6 gap-10">
+                        <div  class="border p-6 rounded-lg shadow-lg bg-white">
+                            <i class="fa-solid fa-rocket fa-bounce fa-5x"></i>
+                            <h4 class="font-bold text-2xl">Feature Section</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, consectetur?</p>
+                            <button class="bg-blue-500 text-white p-4 w-full rounded-lg">Learn More </button>
+
+                        </div>
+                        <div  class="border p-6 rounded-lg shadow-lg bg-white">
+                            <i class="fa-solid fa-rocket fa-bounce fa-5x"></i>
+                            <h4 class="font-bold text-2xl">Feature Section</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, consectetur?</p>
+                            <button class="bg-blue-500 text-white p-4 w-full rounded-lg">Learn More </button>
+
+                        </div>
+                        <div  class="border p-6 rounded-lg shadow-lg bg-white">
+                            <i class="fa-solid fa-rocket fa-bounce fa-5x"></i>
+                            <h4 class="font-bold text-2xl">Feature Section</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, consectetur?</p>
+                            <button class="bg-blue-500 text-white p-4 w-full rounded-lg">Learn More </button>
+
+                        </div>
+
+                    </div>
+
                 </section>
             </article>
 
