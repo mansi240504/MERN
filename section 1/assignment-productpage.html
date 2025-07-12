@@ -8,15 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body class=" flex justify-center items-center  min-h-screen">
-    <div class=" card  bg-white shadow-lg flex flex-col-2 max-w-5xl w-full">
+<body class=" flex justify-center items-center  p-4 min-h-screen">
+    <div class=" card bg-white rounded-xl shadow-lg p-6 max-w-5xl w-full flex flex-col lg:flex-row">
         <!-- image section -->
-         <div class="flex justify-center md:w-1/2 p-6 rounded-lg">
-            <img class=" rounded-xl " src="https://www.ulcdn.net/images/products/920648/original/FNSTCH51BL30462_LP.jpg?1722319025" alt="">
+         <div class="flex justify-center items-center flex-col lg:w-1/2 p-6 rounded-lg p-4 relative ">
+            <img class=" rounded-xl w-full h-auto shadow-md " src="https://www.ulcdn.net/images/products/920648/original/FNSTCH51BL30462_LP.jpg?1722319025" alt="">
+            <div class="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md cursor-pointer">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.727l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+            </div>
+            <div class="flex space-x-2 mt-4 ">
+                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+            </div>
 
          </div>
          <!-- details section -->
-          <div class="p-6"> 
+          <div class=" lg:w-1/2 p-4 lg:pl-10"> 
             <div>
                 <p class="uppercase text-gray-500"> new collection </p>
                 <h1 class="text-3xl">CH07 Shell Chair</h1>
@@ -45,6 +53,26 @@
                         <button class="text-gray-600 rounded-r-lg">+</button>
                     </div>
                 </div>
+            </div>
+            <div class="mb-8 mt-8">
+                <div class=" flex  border-b gap-x-2 ">
+                    <button class="pb-2 text-gray-900  border-b-2 border-black font-bold ">DESCRIPTION</button>
+                    <button class=" pb-2  ">DETAILS</button>
+                </div>
+                <div class="  text-gray-700 grid grid-cols-2 gap-y-2 mt-4">
+                    <p>Size </p><p>29.4" H x 35.8" W x 32.3" D</p>
+                    <p>Seat Height </p> <p>14.5"</p>
+                    <p>Materials</p><p>Plywood, Oak Veneer, Semi-Aniline Italian Leather</p>
+                    <p>Color</p><p>Blue</p>
+                    <p>Weight</p><p>40lbs</p>
+                </div>
+            </div>
+            <div class="flex justify-between mb-2">
+                <p class="font-medium text-2xl">TOTAL PRICE </p>
+                <p class="font-bold text-3xl">$1,198</p>
+            </div>
+            <div>
+                <button  class=" border bg-red-500 text-white w-full p-4 rounded-lg text-xl font-medium ">ADD TO CART</button>
             </div>
           </div>
     </div>
