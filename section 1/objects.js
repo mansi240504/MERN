@@ -35,5 +35,5 @@ console.log(user.name);
     
  Smartphone.Color.pop();
  console.log(Smartphone);
- Smartphone.Color.unshift("Violet")
+ Smartphone.Color.shift();
  console.log(Smartphone); 
