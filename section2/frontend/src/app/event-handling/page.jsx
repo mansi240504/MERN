@@ -3,6 +3,19 @@
 import React from 'react'
 
 const EventHandeling = () => {
+
+  const previewImage=(e)=>{
+    const file = e.target.files[0];
+    const reader =new FileReader();
+
+    reader.onload=(data )=>{
+      const img =document.createElement("img");
+      img.src=data.target.result;
+      document.body.appendChild(img);
+
+    }
+    reader.readAsDataURL(file);
+  }
   return (
     <div className='container mx-auto py-5 min-h-screen' 
     onMouseMove={(e)=>{
@@ -32,8 +45,10 @@ const EventHandeling = () => {
       onKeyDown={(e)=>{ console.log(e.code);}} />
 
       <input type="file"  className='block mt-5'
-      onChange={(e)=> {console.log(e.target.files);}}
-        accept='image/png'/>
+      onChange={previewImage}
+        accept='image/*'
+        multiple 
+        />
     </div>
   )
 }
