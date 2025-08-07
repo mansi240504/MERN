@@ -1,20 +1,32 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { IconTrash } from '@tabler/icons-react';
 
 const Todolist = () => {
 
     // let count =0;
     //  const [count , setCount ] = useState(1);
     const [tasklist, settasklist] = useState([
-        {text: "Wake up at 5:AM",completed:false},
-        {text: "coding",completed:false},
-        {text: "Tution",completed:false},
-        {text: "Lunch",completed:false},
+        // {text: "Wake up at 5:AM",completed:false},
+        // {text: "coding",completed:false},
+        // {text: "Tution",completed:false},
+        // {text: "Lunch",completed:false},
     ])
+    const deleteTask =(index )=>
+    {
+        console.log(index);
+        const temp = tasklist;
+        temp.splice(index,1);
+        settasklist([...temp]);
+    }
     const addTask= (e)=>{
-        if(e.code === "enter"){
+        if(e.code === "Enter"){
             console.log(e.target.value);
-            e.target.value="";
+            const newTask={ text:e.target.value,completed : false,date:(new Date()).toLocaleDateString(), 
+                
+            };
+            settasklist ([newTask, ...tasklist])
+            e.target.value=" ";
         }
         
     }
@@ -30,11 +42,41 @@ const Todolist = () => {
                 <input  
                 onKeyDown={addTask}
                 className="border-3 p-3   bg-white rounded block w-1/2"
-                type="text" 
-                placeholder='Add a new todo' />
+                
+                placeholder='Add a new todo...'
+                type="text"  />
             </div>
-            <div className='p-3 bg-white '>
-                <p> Task list here</p>
+            <div className='p-3 border-t-1 '>
+                {
+                    tasklist.map((task,index)=>
+                    {
+                        return <div
+                          key={index}
+                          style={{borderColor: task.completed ?'green':'red'}}
+                        className='border rounded-lg p-4 mb-4 flex justify-between'>
+                            <div className='flex gap-3'> 
+                                <input type="checkbox"
+                                checked={task.completed}
+                                onChange={(e)=>{
+                                    const temp =tasklist;
+                                    temp[index].completed=e.target.checked;
+                                    settasklist([...temp]);
+
+                                }} />
+                                <p style={{textDecoration:task.completed?'line-through':'none'}}
+                                >{task.text}</p>
+                                </div>
+                                <p>{task.date} {task.time}</p>
+                            <button 
+                            onClick={()=>deleteTask(index)}
+                            className=' bg-red-800 text-white  rounded-lg'>
+                                <IconTrash />
+                                </button>
+                        </div>
+                    })
+                        
+
+                   }
             </div>
 
         </div>
