@@ -2,8 +2,8 @@
 import { useFormik } from 'formik';
 import React from 'react'
 import * as Yup from 'yup';
+
 const SignupSchema = Yup.object().shape({
-   
    name: Yup.string()
      .min(2, 'Too Short!')
      .max(50, 'Too Long!')
@@ -75,7 +75,7 @@ const Signup = () => {
                     </div>
                   </div>
                   {
-                    (signupForm.tounch.name && signupForm.errors.name ) &&
+                    (signupForm.touched.name && signupForm.errors.name ) &&
                     (<p className=" text-xs text-red-600 mt-2" id="email-error">{signupForm.errors.name} </p>)
                   }
                    
