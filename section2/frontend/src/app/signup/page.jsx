@@ -24,7 +24,7 @@ const Signup = () => {
       password: '',
       confirmPassword: ''
     },
-    onSubmit: (values) => {
+    onSubmit: (values,{resetForm}) => {
       console.log(values);
 
       axios.post('http://localhost:5000/user/add',values)
